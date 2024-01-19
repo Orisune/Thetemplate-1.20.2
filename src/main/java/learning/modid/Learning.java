@@ -1,4 +1,5 @@
 package learning.modid;
+import learning.modid.Item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -7,5 +8,8 @@ public class Learning implements ModInitializer {
 	public static String MOD_ID = "Learning";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	@Override
-	public void onInitialize() { LOGGER.info("hello Fabric World!");}
+	public void onInitialize()
+	{
+		ModItems.registerModItems();
+	}
 }
